@@ -4,16 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bhupathi Uday Kiran | Full Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f0f4f8;
+      font-family: 'Inter', sans-serif;
+      background: #f4f7fa;
       color: #333;
       line-height: 1.6;
     }
@@ -21,39 +23,45 @@
     header {
       background: #1976d2;
       color: white;
-      padding: 40px 20px;
+      padding: 80px 20px 60px;
       text-align: center;
     }
 
     header h1 {
+      font-size: 3em;
       margin-bottom: 10px;
-      font-size: 2.5em;
     }
 
-    .links a {
-      margin: 0 10px;
-      color: #fff;
+    .subtitle {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      margin-top: 15px;
+    }
+
+    .nav-links a {
+      margin: 0 12px;
       font-weight: bold;
+      color: #fff;
       text-decoration: none;
       border-bottom: 2px solid transparent;
       transition: 0.3s;
     }
 
-    .links a:hover {
+    .nav-links a:hover {
       border-color: #fff;
     }
 
     .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
     section {
-      padding: 30px 0;
+      padding: 60px 0;
       border-bottom: 1px solid #ddd;
     }
 
@@ -63,13 +71,14 @@
 
     h2 {
       color: #1976d2;
-      margin-bottom: 10px;
-      border-left: 4px solid #1976d2;
-      padding-left: 10px;
+      font-size: 2em;
+      margin-bottom: 20px;
+      border-left: 5px solid #1976d2;
+      padding-left: 15px;
     }
 
     ul {
-      padding-left: 20px;
+      padding-left: 25px;
       list-style: disc;
     }
 
@@ -82,17 +91,44 @@
       text-decoration: underline;
     }
 
-    .project-link {
-      display: inline-block;
-      margin-top: 5px;
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: 0.3s;
     }
 
-    @media (max-width: 600px) {
+    .card:hover {
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1976d2;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #0f4c81;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
       header h1 {
-        font-size: 1.8em;
+        font-size: 2em;
       }
 
-      .links {
+      h2 {
+        font-size: 1.5em;
+      }
+
+      .nav-links {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -104,7 +140,8 @@
 
   <header>
     <h1>Bhupathi Uday Kiran</h1>
-    <div class="links">
+    <div class="subtitle">Full Stack Developer (MERN Stack & Java)</div>
+    <div class="nav-links">
       <a href="mailto:udaykiranbhupathi5@gmail.com" target="_blank">Email</a>
       <a href="https://www.linkedin.com/in/uday-kiran-8a9781235/" target="_blank">LinkedIn</a>
       <a href="https://github.com/Kiranudaybhupathi" target="_blank">GitHub</a>
@@ -113,41 +150,54 @@
 
   <div class="container">
 
-    <section>
+    <section id="profile">
       <h2>Profile</h2>
-      <p>Full Stack Developer (MERN Stack, Java) passionate about building scalable web applications and intuitive user experiences.</p>
+      <div class="card">
+        <p>I’m a Full Stack Developer with a passion for creating scalable web apps and smooth user experiences. With solid hands-on expertise in the MERN stack and Java, I build intuitive, clean, and performance-optimized solutions for the modern web.</p>
+      </div>
     </section>
 
-    <section>
+    <section id="skills">
       <h2>Skills</h2>
-      <ul>
-        <li>MERN Stack: MongoDB, Express.js, React.js, Node.js</li>
-        <li>Frontend: HTML, CSS, JavaScript, Tailwind, Bootstrap</li>
-        <li>Tools: Git, GitHub, VS Code, Postman</li>
-        <li>Deployment: Vercel, Render, GitHub Pages</li>
-      </ul>
+      <div class="card">
+        <ul>
+          <li><strong>MERN Stack:</strong> MongoDB, Express.js, React.js, Node.js</li>
+          <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Tailwind, Bootstrap</li>
+          <li><strong>Tools:</strong> Git, GitHub, VS Code, Postman</li>
+          <li><strong>Deployment:</strong> Vercel, Render, GitHub Pages</li>
+        </ul>
+      </div>
     </section>
 
-    <section>
+    <section id="experience">
       <h2>Experience</h2>
-      <p><strong>Freelance Developer</strong> – Built and deployed full-stack ecommerce platforms with features like user authentication, cart functionality, payment integration, and admin dashboards.</p>
+      <div class="card">
+        <p><strong>Freelance Developer</strong><br>
+        Developed and deployed full-stack eCommerce platforms featuring user authentication, cart functionality, payment gateway integration, and role-based admin dashboards.</p>
+      </div>
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>Ecommerce Website</strong> – Full MERN stack project.
-          <br />
-          <a href="https://kiranudaybhupathi.github.io/Ecommerce-/" target="_blank" class="project-link">🔗 Live Project</a>
-        </li>
-        <li>
-          <strong>Portfolio Website</strong> – Modern personal portfolio built with React and hosted on GitHub Pages.
-        </li>
-      </ul>
+
+      <div class="card">
+        <h3>Ecommerce Website</h3>
+        <p>Complete MERN stack application with user login, cart, payment, and admin features.</p>
+        <a href="https://kiranudaybhupathi.github.io/Ecommerce-/" target="_blank" class="project-link">🔗 Live Project</a>
+      </div>
+
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>Modern portfolio website built with React.js and deployed on GitHub Pages.</p>
+      </div>
+
     </section>
 
   </div>
+
+  <footer>
+    &copy; 2025 Bhupathi Uday Kiran. All rights reserved.
+  </footer>
 
 </body>
 </html>
